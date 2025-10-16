@@ -231,11 +231,6 @@ const notCheck = (clickedEl) => {
       alert("Falha ao carregar formulário");
     }
 
-    if (!template[0].is_default) {
-      console.alert("Template is not default!");
-      return;
-    }
-
     const questions = await returnQuestions(template[0].id);
     const questionList = questions.map((question) => {
       const icons = handleIcons(template[0].icon);
